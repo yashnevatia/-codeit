@@ -11,7 +11,7 @@ app.get('/aman', function(req, res){
 
 app.get('/tejasvi', function(req, res)
 {
-  res.send("Hello new")
+  res.send("Hello new");
 })
 
 app.listen(3000, function(){
