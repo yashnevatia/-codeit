@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/yashnevatia/codeit#readme",
   "dependencies": {
-    "express": "^4.15.4"
+    "express": "^4.15.4",
+    "underscore": "^1.8.3"
   }
 }
