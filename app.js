@@ -16,6 +16,10 @@ app.get('/tejasvi', function(req, res)
   testfunction();
   res.send("Hello new")
 })
+app.get('/nevatia', function(req,res)
+{
+	res.send("Hello World");
+})
 
 
 
