@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
 
+var {testfunction}  = require ('./testfunction');
+
 app.get('/', function(req, res){
   res.send("Hello World");
 })
@@ -11,8 +13,11 @@ app.get('/aman', function(req, res){
 
 app.get('/tejasvi', function(req, res)
 {
+  testfunction();
   res.send("Hello new")
 })
+
+
 
 app.listen(3000, function(){
   console.log("server successfully listening on port 3000");
