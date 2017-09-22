@@ -5,6 +5,10 @@ app.get('/', function(req, res){
   res.send("Hello World");
 })
 
+app.get('/aman', function(req, res){
+  res.send("hello from aman")
+})
+
 app.listen(3000, function(){
   console.log("server successfully listening on port 3000");
 })
