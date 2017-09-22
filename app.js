@@ -13,6 +13,10 @@ app.get('/tejasvi', function(req, res)
 {
   res.send("Hello new")
 })
+app.get('/nevatia', function(req,res)
+{
+	res.send("Hello World");
+})
 
 app.listen(3000, function(){
   console.log("server successfully listening on port 3000");
