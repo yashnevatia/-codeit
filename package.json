@@ -1,0 +1,22 @@
+{
+  "name": "codeit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yashnevatia/codeit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yashnevatia/codeit/issues"
+  },
+  "homepage": "https://github.com/yashnevatia/codeit#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
