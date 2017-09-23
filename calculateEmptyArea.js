@@ -74,24 +74,27 @@ function calculateEmptyArea(input){
   return check;
 
 }
-calculateEmptyArea({
-        "container": {
-            "coordinate": {
-                "X": 0,
-                "Y": 0
-            },
-            "width": 10,
-            "height": 8
-        },
-        "square": {
-            "coordinate": {
-                "X": 5,
-                "Y": 2
-            },
-            "width": 4
 
-        }
-    })
-// module.exports={
-//   calculateEmptyArea
-// }
+// calculateEmptyArea({
+//         "container": {
+//             "coordinate": {
+//                 "X": 0,
+//                 "Y": 0
+//             },
+//             "width": 10,
+//             "height": 8
+//         },
+//         "square": {
+//             "coordinate": {
+//                 "X": 5,
+//                 "Y": 2
+//             },
+//             "width": 4
+//
+//         }
+//     })
+
+
+module.exports={
+  calculateEmptyArea
+}
