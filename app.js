@@ -3,8 +3,11 @@ var app = express();
 var _ = require('underscore');
 
 app.post('/sort', function(req, res){
-res.send("hey");
-
+  var array = req.body;
+  var temp = _.sortBy(array, function(num){
+    return num;
+  })
+  res.send(temp);
 });
 
 app.listen(process.env.PORT || 3000, function(){
