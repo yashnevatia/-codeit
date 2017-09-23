@@ -69,31 +69,15 @@ function calculateEmptyArea(input){
     check = intersection(containerx,containery,containerHeight,containerWidth,childx,childy,childHeight,childWidth);
   }else if(child === 'square'){
     check = intersection(containerx,containery,containerHeight,containerWidth,childx,childy,childWidth,childWidth);
+  }else {
+    var blx = childx - childRadius;
+    var bly = childy - childRadius;
+    check = intersection(containerx,containery,containerHeight,containerWidth,blx,bly,2*childRadius,2*childRadius);
   }
   console.log(check);
   return check;
 
 }
-
-// calculateEmptyArea({
-//         "container": {
-//             "coordinate": {
-//                 "X": 0,
-//                 "Y": 0
-//             },
-//             "width": 10,
-//             "height": 8
-//         },
-//         "square": {
-//             "coordinate": {
-//                 "X": 5,
-//                 "Y": 2
-//             },
-//             "width": 4
-//
-//         }
-//     })
-
 
 module.exports={
   calculateEmptyArea
