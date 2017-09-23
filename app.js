@@ -4,11 +4,12 @@ var _ = require('underscore');
 
 var bodyParser = require('body-parser');
 app.use(bodyParser.json() );
-app.use(bodyParser.urlencoded({     
+app.use(bodyParser.urlencoded({
   extended: true
 }));
 
 app.post('/sort', function(req, res){
+  //console.log(req);
   var array = req.body;
   console.log(array);
   var temp = _.sortBy(array, function(num){
