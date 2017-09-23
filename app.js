@@ -19,8 +19,8 @@ app.post('/sort', function(req, res){
 app.post('/calculateemptyarea', function(req, res){
   var input = req.body;
   console.log(input);
-  console.log(calculateEmptyArea(input));
-  res.send(calculateEmptyArea(input));
+  var result = calculateEmptyArea(input);
+  res.send(result);
 })
 
 app.listen(process.env.PORT || 3000, function(){
