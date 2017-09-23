@@ -22,7 +22,7 @@ app.post('/calculateemptyarea', function(req, res){
   var result = calculateEmptyArea(input);
   var object = {"result" : result};
   console.log(object);
-  res.send(JSON.stringify(object));
+  res.send(JSON.stringify(result));
 })
 
 app.listen(process.env.PORT || 3000, function(){
