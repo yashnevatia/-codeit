@@ -1,3 +1,4 @@
+import sys
 input = sys.argv[1];
 
 def intersection(containerx,containery,containerHeight,containerWidth,childx,childy,childHeight,childWidth):

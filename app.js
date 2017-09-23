@@ -4,6 +4,7 @@ var _ = require('underscore');
 
 app.post('/sort', function(req, res){
   var array = req.body;
+  console.log(array);
   var temp = _.sortBy(array, function(num){
     return num;
   })
@@ -17,7 +18,7 @@ app.post('/calculateemptyarea', function(req, res){
     mode: 'text',
     pythonOptions: ['-u'],
     scriptPath: './',
-    args: [intput]
+    args: [input]
   };
 
   PythonShell.run('hello.py', options, function (err, results) {
