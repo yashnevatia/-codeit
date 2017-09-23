@@ -1,26 +1,21 @@
 var express = require('express');
 var app = express();
 
-/// final
 
-var {testfunction}  = require ('./testfunction');
+var PythonShell = require('python-shell');
 
-app.get('/', function(req, res){
-  res.send("Hello World");
-})
+var options = {
+  mode: 'text',
+  pythonOptions: ['-u'],
+  scriptPath: './',
+  args: ['value1', 'value2', 'value3']
+};
 
-app.get('/aman', function(req, res){
-  res.send("hello from aman")
-})
-
-app.get('/tejasvi', function(req, res){
-  testfunction();
-  res.send("Hello new")
-})
-
-app.post('/nevatia', function(req,res){
-	res.send("Hello World");
-})
+PythonShell.run('hello.py', options, function (err, results) {
+  if (err) throw err;
+  // results is an array consisting of messages collected during execution
+  console.log('results: %j', results);
+});
 
 app.listen(process.env.PORT || 3000, function(){
   console.log("server successfully listening on port 3000");

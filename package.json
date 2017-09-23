@@ -19,6 +19,7 @@
   "homepage": "https://github.com/yashnevatia/codeit#readme",
   "dependencies": {
     "express": "^4.15.4",
+    "python-shell": "^0.4.0",
     "underscore": "^1.8.3"
   }
 }
