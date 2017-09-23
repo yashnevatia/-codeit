@@ -10,6 +10,24 @@ app.post('/sort', function(req, res){
   res.send(temp);
 });
 
+app.post('/calculateemptyarea', function(req, res){
+  var input = req.body;
+  var PythonShell = require('python-shell');
+  var options = {
+    mode: 'text',
+    pythonOptions: ['-u'],
+    scriptPath: './',
+    args: [intput]
+  };
+
+  PythonShell.run('hello.py', options, function (err, results) {
+    if (err) throw err;
+    console.log('results: %j', results);
+    var temp = parseFloat(results);
+    res.send(temp)
+  });
+})
+
 app.listen(process.env.PORT || 3000, function(){
   console.log("server successfully listening");
 })
