@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var _ = require('underscore');
+var {calculateEmptyArea} = require('./calculateEmptyArea');
 
 var bodyParser = require('body-parser');
 
@@ -17,7 +18,9 @@ app.post('/sort', function(req, res){
 });
 
 app.post('/calculateemptyarea', function(req, res){
-
+  var input = req.body;
+  console.log(input);
+  res.send(calculateEmptyArea(input));
 })
 
 app.listen(process.env.PORT || 3000, function(){
