@@ -3,7 +3,7 @@ var app = express();
 var _ = require('underscore');
 
 var bodyParser = require('body-parser');
-app.use(logger('dev'));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
