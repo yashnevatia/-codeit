@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var _ = require('underscore');
 var {calculateEmptyArea} = require('./calculateEmptyArea');
+var {quickSort} = require('./sort');
 
 var bodyParser = require('body-parser');
 
@@ -11,9 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.post('/sort', function(req, res){
   var array = req.body;
   console.log(array);
-  var temp = _.sortBy(array, function(num){
-    return num;
-  })
+  var temp = quickSort(array, 0, array.length -1);
   res.send(temp);
 });
 
