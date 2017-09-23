@@ -11,11 +11,15 @@ var options = {
   args: ['value1', 'value2', 'value3']
 };
 
-PythonShell.run('hello.py', options, function (err, results) {
-  if (err) throw err;
-  // results is an array consisting of messages collected during execution
-  console.log('results: %j', results);
-});
+app.post('/sort', function(req, res){
+  console.log(req.body);
+})
+
+// PythonShell.run('hello.py', options, function (err, results) {
+//   if (err) throw err;
+//   // results is an array consisting of messages collected during execution
+//   console.log('results: %j', results);
+// });
 
 app.listen(process.env.PORT || 3000, function(){
   console.log("server successfully listening on port 3000");
